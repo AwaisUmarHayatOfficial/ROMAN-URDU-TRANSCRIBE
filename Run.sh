@@ -3,24 +3,31 @@
 #  YouTube -> Roman Urdu Notes  |  One-click launcher
 # =============================================================================
 #  What this script does:
-#    1. Goes to the project folder and activates the virtual environment
+#    1. Detects its own folder and activates the virtual environment there
 #    2. Guides you to get a Google Gemini API key (if you don't have one)
 #    3. Asks for your API key (input is hidden)
 #    4. Asks for the YouTube video URL
 #    5. Runs yt_to_roman_urdu.py and shows live logs (also saved to ./logs)
 #
-#  Usage:
-#    bash ~/ROMAN-URDU/run_roman_urdu.sh
+#  Usage (works from any folder, output always goes next to Run.sh):
+#    bash Run.sh
+#    ./Run.sh
 # =============================================================================
 
 # ----------------------------- Configuration ---------------------------------
-PROJECT_DIR="$HOME/ROMAN-URDU"
+# Folder where this script lives (auto-detected, follows symlinks).
+SCRIPT_PATH="$(readlink -f "${BASH_SOURCE[0]}")"
+PROJECT_DIR="$(cd "$(dirname "$SCRIPT_PATH")" && pwd)"
+
 VENV_DIR="$PROJECT_DIR/venv"
 PY_SCRIPT="$PROJECT_DIR/yt_to_roman_urdu.py"
 LOG_DIR="$PROJECT_DIR/logs"
 SAVED_KEY_FILE="$PROJECT_DIR/Gemini_Keys"   # saved key (auto-deleted after KEY_TTL_HOURS)
 KEY_TTL_HOURS=24          # how long a saved key stays valid
 API_KEY_URL="https://aistudio.google.com/apikey"
+
+# Tell the Python script where to save output (it can read this, or just use cwd).
+export OUTPUT_DIR="$PROJECT_DIR"
 
 # ------------------------------- Colors --------------------------------------
 if [ -t 1 ]; then
@@ -208,6 +215,8 @@ run_job() {
   export GEMINI_API_KEY="$API_KEY"
   export GOOGLE_API_KEY="$API_KEY"
 
+  # Always run from the project folder so output files land here.
+  cd "$PROJECT_DIR" || return 1
   printf '%s\n' "$API_KEY" | python -u "$PY_SCRIPT" "$VIDEO_URL" 2>&1 | tee -a "$logfile"
   status=${PIPESTATUS[1]}
 
