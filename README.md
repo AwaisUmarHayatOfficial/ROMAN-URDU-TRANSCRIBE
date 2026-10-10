@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎙️ Roman Urdu Transcribe
+# Roman Urdu Transcribe
 
 **Turn any YouTube video into professionally formatted Roman Urdu study notes.**
 
