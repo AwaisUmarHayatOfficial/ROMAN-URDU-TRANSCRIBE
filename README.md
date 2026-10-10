@@ -167,7 +167,7 @@ Using Windows or macOS? See [Installation](#-installation) below.
 Select your operating system.
 
 <details open>
-<summary><b>🐧 Ubuntu / Linux</b></summary>
+<summary><b> Ubuntu / Linux</b></summary>
 
 <br>
 
