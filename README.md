@@ -238,7 +238,7 @@ The launcher handles the rest automatically. See [Usage](#-usage) for details.
 </details>
 
 <details>
-<summary><b>🪟 Windows</b></summary>
+<summary><b>Windows</b></summary>
 
 <br>
 
