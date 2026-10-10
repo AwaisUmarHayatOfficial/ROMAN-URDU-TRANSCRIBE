@@ -17,7 +17,7 @@ Powered by YouTube transcripts and Google Gemini. Delivered as a styled Word doc
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 1. [Overview](#-overview)
 2. [Key Features](#-key-features)
@@ -37,7 +37,7 @@ Powered by YouTube transcripts and Google Gemini. Delivered as a styled Word doc
 
 ---
 
-## 📖 Overview
+## Overview
 
 **Roman Urdu Transcribe** takes a YouTube video URL, retrieves its subtitles, and converts the full transcript into **word-for-word Roman Urdu**. The result is organized into a clean, book-style study guide with headings, lists, tables, highlighted callout boxes, and clickable timestamps.
 
@@ -45,7 +45,7 @@ It is designed for students, teachers, and learners who want accurate, readable,
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 | Category | Capability |
 | --- | --- |
@@ -62,7 +62,7 @@ It is designed for students, teachers, and learners who want accurate, readable,
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ```mermaid
 flowchart LR
@@ -79,7 +79,7 @@ flowchart LR
 
 ---
 
-## 🧰 Requirements
+## Requirements
 
 | Requirement | Details |
 | --- | --- |
@@ -92,7 +92,7 @@ flowchart LR
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 For **Ubuntu / Linux** users. Run each command one at a time, in order.
 
@@ -162,7 +162,7 @@ Using Windows or macOS? See [Installation](#-installation) below.
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 Select your operating system.
 
@@ -353,7 +353,7 @@ If the script asks for the key, paste it when prompted.
 </details>
 
 <details>
-<summary><b>🍎 macOS</b></summary>
+<summary><b> macOS</b></summary>
 
 <br>
 
@@ -463,7 +463,7 @@ If the script asks for the key, paste it when prompted.
 
 ---
 
-## 🔑 Getting a Gemini API Key
+##  Getting a Gemini API Key
 
 1. Open [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
 2. Sign in with your Google account.
@@ -474,7 +474,7 @@ On first launch, `Run.sh` walks you through these steps and can open the page in
 
 ---
 
-## ▶️ Usage
+## Usage
 
 ### Recommended: automated launcher (Ubuntu / Linux, Windows WSL2, macOS)
 
@@ -514,7 +514,7 @@ python yt_to_roman_urdu.py "https://www.youtube.com/watch?v=XXXXXXXXXXX"
 
 ---
 
-## 📄 Output
+## Output
 
 For every video, the following files are created in the project folder:
 
@@ -534,7 +534,7 @@ For every video, the following files are created in the project folder:
 
 ---
 
-## 🎛️ Configuration
+## Configuration
 
 Design and behaviour settings are located at the top of `yt_to_roman_urdu.py`.
 
@@ -554,7 +554,7 @@ Design and behaviour settings are located at the top of `yt_to_roman_urdu.py`.
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```text
 ROMAN-URDU-TRANSCRIBE/
@@ -568,7 +568,7 @@ ROMAN-URDU-TRANSCRIBE/
 
 ---
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 | Problem | Solution |
 | --- | --- |
@@ -586,7 +586,7 @@ ROMAN-URDU-TRANSCRIBE/
 
 ---
 
-## 🔒 Security Best Practices
+## Security Best Practices
 
 Create a `.gitignore` file in the project folder so that keys, environments, logs, and generated notes are never pushed to GitHub. Add these lines to it:
 
@@ -604,7 +604,7 @@ Gemini_Keys
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - The video must have captions (manual or auto-generated). Videos without subtitles cannot be converted.
 - Output quality depends on the accuracy of the source subtitles and on the Gemini model used.
@@ -613,7 +613,7 @@ Gemini_Keys
 
 ---
 
-## 👤 Author
+## Author
 
 **Awais Umar Hayat**
 GitHub: [@AwaisUmarHayatOfficial](https://github.com/AwaisUmarHayatOfficial)
@@ -622,6 +622,6 @@ GitHub: [@AwaisUmarHayatOfficial](https://github.com/AwaisUmarHayatOfficial)
 
 <div align="center">
 
-If this project helps you, consider giving it a ⭐ on GitHub.
+If this project helps you, consider giving it a on GitHub.
 
 </div>
